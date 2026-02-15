@@ -100,8 +100,10 @@ button {
 
     <script>
         const genbtn =document.querySelector(".gen")
+        const copybtn=document.querySelector(".copy")
         genbtn.addEventListener("click",()=>generate())
-
+        copybtn.addEventListener("click",()=>copied())
+        // generate button functionality 
         function generate(){
             let chars = "1234567890abcdefghijklmnopqrstuv!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUV"
             let passwordLength=12;
@@ -111,7 +113,25 @@ button {
                 password += chars.substring(randomPass,randomPass+1)
              }
              document.querySelector("#password").value=password
+        }
+        // copy button functionality 
+        function copied(){
+            let passwordInput = document.querySelector("#password");
 
+        //    copy.select();
+        //     document.execCommand("copy")
+
+        const text= passwordInput.value;
+
+            if(!text==="") return
+            navigator.clipboard.writeText(text)
+            .then(()=>{
+                alert("Password Copied")
+            })
+            .catch(()=>{
+                alert("Failed to copy ")
+            })
+            
         }
     </script>
 </body>
