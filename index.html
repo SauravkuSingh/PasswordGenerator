@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator </title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+}
+
+.continer {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+#password {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#password:focus {
+    border-color: #6c63ff;
+}
+
+.buttonss {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.gen {
+    background-color: #6c63ff;
+    color: white;
+}
+
+.gen:hover {
+    background-color: #574fd6;
+}
+
+.copy {
+    background-color: #333;
+    color: white;
+}
+
+.copy:hover {
+    background-color: #000;
+}
+
+    </style>
+</head>
+<body>
+    <div class="continer">
+        <h1>Random Password Generator 🔐</h1>
+
+        <input type="text" placeholder="Generated Password show here " id="password">
+
+        <div class="buttonss">
+            <button class="gen">Generate</button>
+            <button class="copy">Copy</button>
+        </div>
+    </div>
+</body>
+</html>
