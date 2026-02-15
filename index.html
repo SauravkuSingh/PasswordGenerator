@@ -97,5 +97,22 @@ button {
             <button class="copy">Copy</button>
         </div>
     </div>
+
+    <script>
+        const genbtn =document.querySelector(".gen")
+        genbtn.addEventListener("click",()=>generate())
+
+        function generate(){
+            let chars = "1234567890abcdefghijklmnopqrstuv!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUV"
+            let passwordLength=12;
+            let password ="";
+             for(let i=0 ; i<passwordLength;i++){
+                let randomPass=Math.floor(Math.random()*chars.length)
+                password += chars.substring(randomPass,randomPass+1)
+             }
+             document.querySelector("#password").value=password
+
+        }
+    </script>
 </body>
 </html>
